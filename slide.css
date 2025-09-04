@@ -1,0 +1,46 @@
+.slider{
+
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 !important;
+        overflow: hidden;
+        
+
+        /*
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/
+
+    }
+
+    .slider-content {
+     
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider .slider-content input {
+     display: none;
+     color: red;
+        
+    }
+
+    .slide-box {
+        width: 16,6%;
+        height: auto;
+        position: relative;
+        text-align: center;
+
+        /*overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;*/ 
+    }
+       

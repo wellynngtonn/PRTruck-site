@@ -1,0 +1,129 @@
+.hamburguer {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 10;
+        }
+        
+        .hamburguer:focus {
+            outline: none;
+        }
+        
+        .hamburguer-line {
+            width: 30px;
+            height: 3px;
+            background-color: #0c0c0c;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            transform-origin: center;
+        }
+        
+        /* Estilos para o menu de navegação */
+        /* .nav__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .btn--outline {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn--outline:hover {
+            background-color: #333;
+            color: #fff;
+        } */
+        
+        /* Media query para telas pequenas */
+        @media screen and (max-width: 900px) {
+            .hamburguer {
+                display: flex;
+            }
+
+                        
+            
+            
+            .nav__links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                max-width: 300px;
+                flex-direction: column;
+                background-color: #0b2b6a;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease-in-out;
+                padding-top: 80px;
+                z-index: 5;
+                gap: 20px;
+            }
+            
+            .nav__links.active {
+                right: 0;
+            }
+            
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+                z-index: 4;
+            }
+            
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            /* Animação do botão hamburguer para X */
+            .hamburguer.active .hamburguer-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburguer.active .hamburguer-line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburguer.active .hamburguer-line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+        
+        /* Conteúdo de exemplo para demonstrar o menu */
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
